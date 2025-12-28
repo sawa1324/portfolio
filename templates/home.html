@@ -1,0 +1,791 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Герой секция для Python разработчика -->
+<section class="hero" style="position: relative; overflow: hidden;">
+    <!-- Python-тематичный анимированный фон -->
+    <div class="python-bg-animation">
+        <div class="python-logo" style="position: absolute; top: 20%; right: 10%; opacity: 0.1; font-size: 10rem; color: #3776ab;">
+            <i class="fab fa-python"></i>
+        </div>
+        <div class="code-particle"></div>
+        <div class="code-particle"></div>
+        <div class="code-particle"></div>
+        <div class="code-particle"></div>
+        <div class="code-particle"></div>
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="hero-content">
+            <div class="python-badge" style="display: inline-block; background: linear-gradient(135deg, #3776ab 0%, #FFD43B 100%); padding: 0.5rem 1.5rem; border-radius: 50px; margin-bottom: 1rem; font-weight: 600;">
+                <i class="fab fa-python"></i> Python Developer
+            </div>
+            <h1 class="hero-title typewriter">
+                <span class="typewriter-text">Привет, я Sawa4ka</span>
+            </h1>
+            <p class="hero-subtitle" style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Python-программист-любитель с фокусом на создании ботов, скриптов и интересных решений
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'portfolio:projects' %}" class="btn btn-primary pulse-btn">
+                    <i class="fas fa-code"></i> Мои Python-проекты
+                </a>
+                <a href="#python-skills" class="btn btn-outline">
+                    <i class="fab fa-python"></i> Мои навыки
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- О себе как Python разработчике -->
+<section id="about" class="section reveal-section" style="position: relative; background: rgba(55, 118, 171, 0.03);">
+    <div class="container">
+        <h2 class="section-title fade-in-title">
+            <span class="python-gradient-text">Почему Python?</span>
+        </h2>
+        <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem; color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin-left: auto; margin-right: auto;">
+            Я выбрал Python за его простоту, читаемость и огромные возможности. От автоматизации задач до сложных систем — всё можно сделать на Python.
+        </p>
+        
+        <div class="python-features-grid">
+            <div class="python-feature-card reveal-card" style="animation-delay: 0.1s;">
+                <div class="python-icon-wrapper">
+                    <i class="fas fa-robot fa-2x" style="color: #3776ab;"></i>
+                    <div class="python-glow" style="background: rgba(55, 118, 171, 0.2);"></div>
+                </div>
+                <h3>Telegram Боты</h3>
+                <p>Создаю функциональных Telegram-ботов для различных задач, от полезных утилит до развлекательных ботов.</p>
+                <div class="feature-tech">
+                    <span class="tech-tag"><i class="fab fa-telegram"></i> python-telegram-bot</span>
+                    <span class="tech-tag"><i class="fas fa-database"></i> SQLite/PostgreSQL</span>
+                </div>
+            </div>
+            
+            <div class="python-feature-card reveal-card" style="animation-delay: 0.3s;">
+                <div class="python-icon-wrapper">
+                    <i class="fas fa-cogs fa-2x" style="color: #FFD43B;"></i>
+                    <div class="python-glow" style="background: rgba(255, 212, 59, 0.2);"></div>
+                </div>
+                <h3>Автоматизация</h3>
+                <p>Пишу скрипты для автоматизации рутинных задач, парсинга данных и обработки информации.</p>
+                <div class="feature-tech">
+                    <span class="tech-tag"><i class="fas fa-terminal"></i> BeautifulSoup4</span>
+                    <span class="tech-tag"><i class="fas fa-file-excel"></i> pandas</span>
+                </div>
+            </div>
+            
+            <div class="python-feature-card reveal-card" style="animation-delay: 0.5s;">
+                <div class="python-icon-wrapper">
+                    <i class="fas fa-window-maximize fa-2x" style="color: #8b5cf6;"></i>
+                    <div class="python-glow" style="background: rgba(139, 92, 246, 0.2);"></div>
+                </div>
+                <h3>GUI Приложения</h3>
+                <p>Разрабатываю десктопные приложения с графическим интерфейсом с помощью Tkinter и PyQt.</p>
+                <div class="feature-tech">
+                    <span class="tech-tag"><i class="fas fa-window-restore"></i> Tkinter</span>
+                    <span class="tech-tag"><i class="fab fa-python"></i> PyQt/PySide</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Мой Python стек -->
+<section id="python-skills" class="section reveal-section" style="background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);">
+    <div class="container">
+        <h2 class="section-title fade-in-title">
+            <span class="python-gradient-text">Мой Python Стек</span>
+        </h2>
+        
+        <div class="python-skills-container">
+            <!-- Основные библиотеки -->
+            <div class="python-skills-category reveal-card" style="animation-delay: 0.1s;">
+                <div class="category-header">
+                    <i class="fas fa-toolbox fa-2x" style="color: #3776ab;"></i>
+                    <h3>Основные библиотеки</h3>
+                </div>
+                <div class="python-skills-list">
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">aiogram / python-telegram-bot</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%; background: linear-gradient(90deg, #3776ab 0%, #4a9ce6 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">BeautifulSoup4 / Scrapy</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%; background: linear-gradient(90deg, #FF6B6B 0%, #FF8E8E 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">SQLAlchemy / peewee</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%; background: linear-gradient(90deg, #4ECDC4 0%, #56E7E0 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">requests / aiohttp</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%; background: linear-gradient(90deg, #FFD93D 0%, #FFE873 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Фреймворки и инструменты -->
+            <div class="python-skills-category reveal-card" style="animation-delay: 0.3s;">
+                <div class="category-header">
+                    <i class="fas fa-layer-group fa-2x" style="color: #FFD43B;"></i>
+                    <h3>Фреймворки и инструменты</h3>
+                </div>
+                <div class="python-skills-list">
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Django / Django REST</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%; background: linear-gradient(90deg, #092E20 0%, #0A4D2E 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">FastAPI</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%; background: linear-gradient(90deg, #009688 0%, #00BFA5 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Tkinter / PyQt</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%; background: linear-gradient(90deg, #3F51B5 0%, #5C6BC0 100%);"></div>
+                        </div>
+                    </div>
+                    <div class="python-skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Git / Docker</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%; background: linear-gradient(90deg, #F4511E 0%, #FF7043 100%);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Блок с миссией -->
+        <div class="python-mission reveal-card" style="animation-delay: 0.5s;">
+            <div class="mission-content">
+                <div class="mission-icon">
+                    <i class="fas fa-bullseye fa-2x" style="color: #FFD43B;"></i>
+                </div>
+                <h3>Моя миссия как Python-разработчика</h3>
+                <p>Создавать качественные, эффективные и понятные решения на Python. Мне нравится превращать сложные задачи в элегантный код и помогать другим осваивать этот замечательный язык.</p>
+                <div class="mission-stats">
+                    <div class="mission-stat">
+                        <span class="stat-number">3+</span>
+                        <span class="stat-label">года с Python</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">реализованных ботов</span>
+                    </div>
+                    <div class="mission-stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">желание учиться</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Мои текущие интересы в Python -->
+<section class="section reveal-section" style="background: rgba(55, 118, 171, 0.05);">
+    <div class="container">
+        <h2 class="section-title fade-in-title">
+            <span class="python-gradient-text">На чем сейчас фокус</span>
+        </h2>
+        
+        <div class="python-interests">
+            <div class="interest-card reveal-card" style="animation-delay: 0.1s;">
+                <div class="interest-header">
+                    <div class="interest-badge" style="background: #3776ab;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Асинхронное программирование</h3>
+                </div>
+                <p>Изучаю asyncio для создания быстрых и эффективных асинхронных приложений и ботов.</p>
+                <div class="interest-tags">
+                    <span>asyncio</span>
+                    <span>aiohttp</span>
+                    <span>async/await</span>
+                </div>
+            </div>
+            
+            <div class="interest-card reveal-card" style="animation-delay: 0.3s;">
+                <div class="interest-header">
+                    <div class="interest-badge" style="background: #FFD43B;">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI и ML для ботов</h3>
+                </div>
+                <p>Экспериментирую с интеграцией простых ML-моделей в Telegram-ботов для "умных" ответов.</p>
+                <div class="interest-tags">
+                    <span>scikit-learn</span>
+                    <span>NLTK</span>
+                    <span>transformers</span>
+                </div>
+            </div>
+            
+            <div class="interest-card reveal-card" style="animation-delay: 0.5s;">
+                <div class="interest-header">
+                    <div class="interest-badge" style="background: #8b5cf6;">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Инструменты для разработки</h3>
+                </div>
+                <p>Создаю собственные утилиты и библиотеки для ускорения процесса разработки на Python.</p>
+                <div class="interest-tags">
+                    <span>CLI tools</span>
+                    <span>decorators</span>
+                    <span>code generation</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Призыв к действию -->
+<section class="cta-section reveal-section" style="background: linear-gradient(135deg, #3776ab 0%, #2c5f8a 100%);">
+    <div class="container">
+        <div class="python-cta-card">
+            <div class="cta-content">
+                <h2>Хочешь обсудить Python-проект?</h2>
+                <p>Я всегда открыт для интересных идей, совместной работы или просто обсуждения Python-технологий. Давайте создадим что-то крутое вместе!</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="{% url 'contacts:contact' %}" class="btn btn-light">
+                    <i class="fab fa-telegram"></i> Написать в Telegram
+                </a>
+                <a href="{% url 'portfolio:projects' %}" class="btn btn-outline-light">
+                    <i class="fas fa-code"></i> Посмотреть код
+                </a>
+            </div>
+            <div class="cta-python">
+                <i class="fab fa-python fa-3x" style="opacity: 0.2;"></i>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Python-тематичные стили */
+    .python-gradient-text {
+        background: linear-gradient(135deg, #3776ab 0%, #FFD43B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    /* Анимации для Python-фона */
+    .python-bg-animation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    .code-particle {
+        position: absolute;
+        background: rgba(55, 118, 171, 0.3);
+        border-radius: 2px;
+        animation: float-code 20s infinite linear;
+    }
+    
+    .code-particle:nth-child(2) { width: 4px; height: 2px; top: 20%; left: 5%; animation-delay: 0s; }
+    .code-particle:nth-child(3) { width: 3px; height: 3px; top: 40%; left: 90%; animation-delay: 2s; }
+    .code-particle:nth-child(4) { width: 2px; height: 2px; top: 60%; left: 15%; animation-delay: 4s; }
+    .code-particle:nth-child(5) { width: 3px; height: 1px; top: 80%; left: 70%; animation-delay: 6s; }
+    .code-particle:nth-child(6) { width: 2px; height: 2px; top: 30%; left: 50%; animation-delay: 8s; }
+    
+    @keyframes float-code {
+        0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+    }
+    
+    /* Python-карточки */
+    .python-features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .python-feature-card {
+        background: var(--bg-card);
+        border-radius: 16px;
+        padding: 2rem;
+        border: 1px solid rgba(55, 118, 171, 0.3);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .python-feature-card:hover {
+        transform: translateY(-10px);
+        border-color: #3776ab;
+        box-shadow: 0 20px 40px rgba(55, 118, 171, 0.2);
+    }
+    
+    .python-icon-wrapper {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .python-icon-wrapper i {
+        position: relative;
+        z-index: 2;
+    }
+    
+    .python-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        filter: blur(15px);
+        animation: python-glow 3s infinite alternate;
+    }
+    
+    @keyframes python-glow {
+        0% { opacity: 0.3; transform: scale(0.9); }
+        100% { opacity: 0.7; transform: scale(1.1); }
+    }
+    
+    .feature-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .tech-tag {
+        display: inline-block;
+        background: rgba(55, 118, 171, 0.1);
+        color: #3776ab;
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        border: 1px solid rgba(55, 118, 171, 0.3);
+        transition: all 0.3s ease;
+    }
+    
+    .tech-tag:hover {
+        background: rgba(55, 118, 171, 0.2);
+        transform: translateY(-2px);
+    }
+    
+    /* Python навыки */
+    .python-skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .python-skills-category {
+        background: var(--bg-card);
+        border-radius: 16px;
+        padding: 2rem;
+        border: 1px solid var(--border);
+    }
+    
+    .category-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .python-skills-list {
+        display: grid;
+        gap: 1.5rem;
+    }
+    
+    .python-skill-item {
+        display: grid;
+        gap: 0.5rem;
+    }
+    
+    .skill-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.3rem;
+    }
+    
+    .skill-name {
+        font-size: 0.95rem;
+        color: var(--text-secondary);
+    }
+    
+    .skill-percent {
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 0.9rem;
+    }
+    
+    .skill-bar {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .skill-level {
+        height: 100%;
+        border-radius: 4px;
+        animation: fillSkillBar 1.5s ease-out forwards;
+        transform-origin: left;
+    }
+    
+    /* Миссия Python-разработчика */
+    .python-mission {
+        background: linear-gradient(135deg, rgba(55, 118, 171, 0.1) 0%, rgba(255, 212, 59, 0.1) 100%);
+        border-radius: 16px;
+        padding: 3rem;
+        border: 1px solid rgba(55, 118, 171, 0.3);
+        text-align: center;
+    }
+    
+    .mission-content {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    
+    .mission-icon {
+        margin-bottom: 1.5rem;
+    }
+    
+    .mission-content h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+    
+    .mission-content p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    
+    .mission-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+    }
+    
+    .mission-stat {
+        text-align: center;
+    }
+    
+    .stat-number {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #3776ab;
+        line-height: 1;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-top: 0.3rem;
+    }
+    
+    /* Интересы в Python */
+    .python-interests {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .interest-card {
+        background: var(--bg-card);
+        border-radius: 16px;
+        padding: 2rem;
+        border: 1px solid var(--border);
+        transition: all 0.3s ease;
+    }
+    
+    .interest-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    .interest-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .interest-badge {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+    }
+    
+    .interest-card h3 {
+        font-size: 1.3rem;
+        color: var(--text-primary);
+    }
+    
+    .interest-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+    
+    .interest-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .interest-tags span {
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-secondary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.8rem;
+    }
+    
+    /* Python CTA */
+    .python-cta-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        padding: 4rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .cta-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto 2rem;
+    }
+    
+    .cta-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: white;
+    }
+    
+    .cta-content p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
+    .cta-buttons {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .btn-light {
+        background: white;
+        color: #3776ab;
+        border: none;
+    }
+    
+    .btn-light:hover {
+        background: #f0f0f0;
+        transform: translateY(-2px);
+    }
+    
+    .btn-outline-light {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+    
+    .btn-outline-light:hover {
+        background: white;
+        color: #3776ab;
+    }
+    
+    .cta-python {
+        position: absolute;
+        right: 2rem;
+        bottom: 2rem;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    /* Общие анимации */
+    .reveal-section {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: revealUp 1s ease forwards;
+    }
+    
+    .reveal-card {
+        opacity: 0;
+        transform: translateY(30px);
+        animation: revealUp 0.6s ease forwards;
+    }
+    
+    .fade-in-title {
+        opacity: 0;
+        animation: fadeIn 1s ease forwards 0.3s;
+    }
+    
+    @keyframes revealUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 768px) {
+        .python-features-grid,
+        .python-skills-container,
+        .python-interests {
+            grid-template-columns: 1fr;
+        }
+        
+        .python-mission {
+            padding: 2rem;
+        }
+        
+        .mission-stats {
+            gap: 1.5rem;
+        }
+        
+        .python-cta-card {
+            padding: 2rem;
+        }
+        
+        .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .cta-python {
+            display: none;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Анимация для карточек
+        const cards = document.querySelectorAll('.reveal-card');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.style.animationDelay || '0s';
+                    entry.target.style.animationDelay = delay;
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        cards.forEach(card => observer.observe(card));
+        
+        // Анимация для прогресс-баров
+        const skillBars = document.querySelectorAll('.skill-level');
+        skillBars.forEach((bar, index) => {
+            setTimeout(() => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.transition = 'width 1.5s ease-out';
+                    bar.style.width = width;
+                }, 100);
+            }, index * 200);
+        });
+        
+        // Интерактивные эффекты для Python-карточек
+        const pythonCards = document.querySelectorAll('.python-feature-card');
+        pythonCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#') && this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
