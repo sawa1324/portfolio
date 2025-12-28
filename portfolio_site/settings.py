@@ -38,6 +38,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'portfolio_site.urls'
+ALLOWED_HOSTS = ['portfolio-m25q.onrender.com', '127.0.0.1', 'localhost']
 
 TEMPLATES = [
     {
@@ -100,4 +101,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Telegram settings
 TELEGRAM_BOT_TOKEN = '8296280900:AAHBmKrsOCj80lNlT7L7a2mFG5VwaXJ4dgQ'
+
 TELEGRAM_CHAT_ID = '5626406621'
